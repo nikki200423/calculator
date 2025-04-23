@@ -1,0 +1,83 @@
+<!--<html>
+    <head>
+    <title>calculator</title>
+    <link rel="stylesheet" href="cal.css">
+    </head>
+    <body>
+        <div>
+            <form class="cal">
+                <input type="text" name ="display" >
+                <br><br>
+                <input type="button" value="9" onclick="display.value+='9'" id="v1">
+                <input type="button" value="8" onclick="display.value+='8'" id="v2">
+                <input type="button" value="7" onclick="display.value+='7'" id="v3">
+                <input type="button" value="+" onclick="display.value+='+'" id="v4">
+                <br><br>
+                <input type="button" value="6" onclick="display.value+='6'" id="v5">
+                <input type="button" value="5" onclick="display.value+='5'" id="v6">
+                <input type="button" value="4" onclick="display.value+='4'" id="v7">
+                <input type="button" value="-" onclick="display.value+='-'" id="v9">
+                <br><br>   
+                <input type="button" value="3" onclick="display.value+='3'" id="v10">
+                <input type="button" value="2" onclick="display.value+='2'" id="v11">
+                <input type="button" value="1" onclick="display.value+='1'" id="v12">
+                <input type="button" value="0" onclick="display.value+='0'" id="v13">
+                <br><br>
+                <input type="button" value="/" onclick="display.value+='/'" id="v14">
+                <input type="button" value="*" onclick="display.value+='*'" id="v15">
+                <input type="button" value="." onclick="display.value+='.'" id="v16">
+                <input type="button" value="=" onclick="display.value=eval(display.value)" id="v17">
+                <br><br>
+                <input type="button" value="Delete" onclick="display.value=''" id="del" >
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                <input type="button" value="MATH" id="nikki">
+
+            </form>
+        </div>
+        <img src="img.png">
+        <img src="img2.png" id="img2">
+        <img src="img3.png" id="img3">
+        <img src="img4.png" id="img4">
+    </body>
+</html>-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Responsive Calculator</title>
+  <link rel="stylesheet" href="cal.css">
+</head>
+<body>
+
+  <div class="calculator">
+    <input type="text" class="display" id="display" readonly />
+    <div class="buttons">
+      <button onclick="append('9')">9</button>
+      <button onclick="append('8')">8</button>
+      <button onclick="append('7')">7</button>
+      <button onclick="append('+')">+</button>
+
+      <button onclick="append('6')">6</button>
+      <button onclick="append('5')">5</button>
+      <button onclick="append('4')">4</button>
+      <button onclick="append('-')">-</button>
+
+      <button onclick="append('3')">3</button>
+      <button onclick="append('2')">2</button>
+      <button onclick="append('1')">1</button>
+      <button onclick="append('0')">0</button>
+
+      <button onclick="append('/')">/</button>
+      <button onclick="append('*')">*</button>
+      <button onclick="append('.')">.</button>
+      <button onclick="calculate()">=</button>
+    </div>
+    <div class="actions">
+      <button id="del" onclick="clearDisplay()">Delete</button>
+      <button id="nikki">MATH</button>
+    </div>
+  </div>
+  <script src="cal.js"></script>
+</body>
+</html>
